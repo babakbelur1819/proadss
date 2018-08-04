@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+
+  <meta charset="utf-8" />
+  <meta name="land" content="197354;7015;18585">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style type="text/css">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}</style>
+
+  
+        
+  
+  
+  
+        
+  
+  
+  
+
+  <style>
+    .click-gateway {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .click-gateway.click-gateway-visible {
+      animation: fadeIn 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    .click-gateway .click-gateway-link {
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-size: 3em;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1em;
+      border-radius: 100%;
+      border: .1em solid rgba(255, 255, 255, 0.5);
+      transition: all 0.2s ease;
+    }
+
+    .click-gateway .click-gateway-link:hover {
+      transform: scale(1.2);
+      background-color: #4d9e1b;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <style>
+    
+        html { background-color: white !important; }
+    
+        
+  </style>
+
+  
+  	
+  	
+        
+
+
+        
+  
+  
+  
+  <title>
+          AdNow JS 521026 Desktop      </title>
+
+  
+      <style type="text/css">
+          </style>
+  
+  
+  
+  
+  
+  
+</head>
+<body class="en ltr viewport-loading">
+  
+    
+
+  
+<script>
+  // IE Promise polyfill
+  !function(e,n){"object"==typeof exports&&"undefined"!=typeof module?n():"function"==typeof define&&define.amd?define(n):n()}(0,function(){"use strict";function e(){}function n(e){if(!(this instanceof n))throw new TypeError("Promises must be constructed via new");if("function"!=typeof e)throw new TypeError("not a function");this._state=0,this._handled=!1,this._value=undefined,this._deferreds=[],f(e,this)}function t(e,t){for(;3===e._state;)e=e._value;0!==e._state?(e._handled=!0,n._immediateFn(function(){var n=1===e._state?t.onFulfilled:t.onRejected;if(null!==n){var i;try{i=n(e._value)}catch(f){return void r(t.promise,f)}o(t.promise,i)}else(1===e._state?o:r)(t.promise,e._value)})):e._deferreds.push(t)}function o(e,t){try{if(t===e)throw new TypeError("A promise cannot be resolved with itself.");if(t&&("object"==typeof t||"function"==typeof t)){var o=t.then;if(t instanceof n)return e._state=3,e._value=t,void i(e);if("function"==typeof o)return void f(function(e,n){return function(){e.apply(n,arguments)}}(o,t),e)}e._state=1,e._value=t,i(e)}catch(u){r(e,u)}}function r(e,n){e._state=2,e._value=n,i(e)}function i(e){2===e._state&&0===e._deferreds.length&&n._immediateFn(function(){e._handled||n._unhandledRejectionFn(e._value)});for(var o=0,r=e._deferreds.length;r>o;o++)t(e,e._deferreds[o]);e._deferreds=null}function f(e,n){var t=!1;try{e(function(e){t||(t=!0,o(n,e))},function(e){t||(t=!0,r(n,e))})}catch(i){if(t)return;t=!0,r(n,i)}}var u=function(e){var n=this.constructor;return this.then(function(t){return n.resolve(e()).then(function(){return t})},function(t){return n.resolve(e()).then(function(){return n.reject(t)})})},c=setTimeout;n.prototype["catch"]=function(e){return this.then(null,e)},n.prototype.then=function(n,o){var r=new this.constructor(e);return t(this,new function(e,n,t){this.onFulfilled="function"==typeof e?e:null,this.onRejected="function"==typeof n?n:null,this.promise=t}(n,o,r)),r},n.prototype["finally"]=u,n.all=function(e){return new n(function(n,t){function o(e,f){try{if(f&&("object"==typeof f||"function"==typeof f)){var u=f.then;if("function"==typeof u)return void u.call(f,function(n){o(e,n)},t)}r[e]=f,0==--i&&n(r)}catch(c){t(c)}}if(!e||"undefined"==typeof e.length)throw new TypeError("Promise.all accepts an array");var r=Array.prototype.slice.call(e);if(0===r.length)return n([]);for(var i=r.length,f=0;r.length>f;f++)o(f,r[f])})},n.resolve=function(e){return e&&"object"==typeof e&&e.constructor===n?e:new n(function(n){n(e)})},n.reject=function(e){return new n(function(n,t){t(e)})},n.race=function(e){return new n(function(n,t){for(var o=0,r=e.length;r>o;o++)e[o].then(n,t)})},n._immediateFn="function"==typeof setImmediate&&function(e){setImmediate(e)}||function(e){c(e,0)},n._unhandledRejectionFn=function(e){void 0!==console&&console&&console.warn("Possible Unhandled Promise Rejection:",e)};var l=function(){if("undefined"!=typeof self)return self;if("undefined"!=typeof window)return window;if("undefined"!=typeof global)return global;throw Error("unable to locate global object")}();l.Promise?l.Promise.prototype["finally"]||(l.Promise.prototype["finally"]=u):l.Promise=n});
+</script>
+
+<script type="text/javascript" async>
+  (function (s,w) {
+	w.viewportInfo = function () {
+	  return new Promise (function(resolve, reject) {
+		let info = { height: 0, width: 0, screen: null, osFamily: 'windows' };
+		let resizeTimer;
+		function getViewportInfo () {
+		  clearTimeout(resizeTimer);
+		  resizeTimer = setTimeout(function () {
+			info.height = w.innerHeight;
+			info.width = w.innerWidth;
+			info.screen = s;
+			w.removeEventListener('resize', getViewportInfo, false);
+			resolve(info);
+		  }, 100);
+		}
+		w.addEventListener('load', getViewportInfo, false);
+		w.addEventListener('resize', getViewportInfo, false);
+	  });
+	};
+  })(screen, window);
+  (function (d, s, w) {
+	function addClass (el, className) {
+	  if (el.classList) { el.classList.add(className); }
+	  else { el.className += ' ' + className; }
+	}
+	function removeClass (el, className) {
+	  if (el.classList) { el.classList.remove(className); }
+	  else { el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' '); }
+	}
+	function checkOrientation (info) {
+	  if (typeof info.screen.orientation !== 'undefined') {
+		if (info.screen.orientation.type == 'portrait-primary') {
+		  addClass(d.body, 'viewport-screen-orientation-portrait');
+		  removeClass(d.body, 'viewport-screen-orientation-landscape');
+		} else {
+		  removeClass(d.body, 'viewport-screen-orientation-portrait');
+		  addClass(d.body, 'viewport-screen-orientation-landscape');
+		}	
+	  }
+	}
+	function checkCreativeSize (info) {
+	  var width = parseInt((info.width * 100)/info.screen.width);
+	  var height = parseInt((info.height * 100)/info.screen.height);
+	  if (width > 90 && height > 90) {
+		addClass(d.body, 'viewport-creative-size-fullscreen');
+		removeClass(d.body, 'viewport-creative-size-not-fullscreen');
+		removeClass(d.body, 'viewport-creative-size-slider');
+	  } else {
+		if (width > 50 && height > 50) {
+		  addClass(d.body, 'viewport-creative-size-not-fullscreen');
+		  removeClass(d.body, 'viewport-creative-size-fullscreen');
+		  removeClass(d.body, 'viewport-creative-size-slider');
+		} else {
+		  addClass(d.body, 'viewport-creative-size-slider');
+		  removeClass(d.body, 'viewport-creative-size-fullscreen');
+		  removeClass(d.body, 'viewport-creative-size-not-fullscreen');
+		}
+	  }
+	}
+	
+	function vpzn(str) {
+	  return Math.ceil(parseFloat(str).toFixed(2) * 10);
+	}
+    
+    /**
+     * A global promise for getting traffic quality and zone settings from top
+     * level frame
+     */
+    window.trafficQualityAndZoneSettings = new Promise(function(resolve, reject) {
+      var timeout;
+      
+      var listener = function (e) {
+        if (e.data.trafficQuality && e.data.zoneSettings) {
+          window.removeEventListener('message', listener);
+          clearTimeout(timeout);
+          resolve(e.data);
+        }
+        else {
+          resolve(); // An unfortunate case when there's no data (probably won't happen)
+        }
+      }
+      
+      timeout = setTimeout(resolve, 1000);
+      window.addEventListener('message', listener);
+	  window.top.postMessage('getTrafficQualityAndZoneSettings', '*');
+      
+    });
+
+    window.trafficQualityAndZoneSettings.then(function(data) {
+      if (data) {
+        if (data.zoneSettings) {
+		  if (data.zoneSettings.desktopZoom !== null) {
+		    addClass(d.body, 'viewport-desktop-zoom');
+		    addClass(d.body, 'viewport-desktop-zoom-' + vpzn(data.zoneSettings.desktopZoom));
+		  }
+		  if (data.zoneSettings.mobileZoom !== null && data.zoneSettings.desktopZoom === null) {
+		    addClass(d.body, 'viewport-mobile-zoom');
+		    addClass(d.body, 'viewport-mobile-zoom-' + vpzn(data.zoneSettings.mobileZoom));
+		  }
+	    }  
+      }
+    });
+    
+	viewportInfo().then(function (info) {
+	  removeClass(d.body, 'viewport-loading');
+	  addClass(d.body, 'viewport-os-' + info.osFamily);
+	  checkOrientation(info);
+	  checkCreativeSize(info);
+	});
+	w.addEventListener('orientationchange', function () {
+	  viewportInfo().then(function (info) {
+		checkOrientation(info);
+		checkCreativeSize(info);
+	  });
+	}, false);
+  })(document, screen, window);
+</script>
+
+  
+
+  
+
+    
+      
+    
+    
+    
+    
+        
+              
+                  
+                  
+                  
+        
+        
+    <div id="SC_TBlock_521026" class="SC_TBlock">loading...</div><script type="text/javascript">     (sc_adv_out = window.sc_adv_out || []).push({ id : "521026",   domain : "n.ads3-adnow.com" }); </script> <script type="text/javascript" src="//st-n.ads3-adnow.com/js/adv_out.js"></script>    
+    
+    <script>
+      var clickDelay = parseInt('3') * 1000;
+      if (!clickDelay) {
+        clickDelay = 0;
+      }
+
+      var clickGateway = 'true' === 'true';
+      var clickGatewayHtml = `<div class="click-gateway">
+        <a class="click-gateway-link" target="_blank">Go</a>
+      </div>`;
+      
+      trafficQualityAndZoneSettings.then(function(data) {
+        if (data) {
+          var zoneSettings = data.zoneSettings;
+          
+          if (zoneSettings.clickDelay !== false) {
+            clickDelay = parseInt(zoneSettings.clickDelay) * 1000;
+          }
+          
+          if (zoneSettings.clickGateway !== false) {
+            clickGateway = zoneSettings.clickGateway === 'true';
+          }
+
+          console.log('Resulting clickDelay is: ' + clickDelay);
+          console.log('Resulting clickGateway is: ' + clickGateway);
+        }
+
+        function createClickBlocker(timeout) {
+          
+          var block = document.createElement('div');
+          block.style.position = 'fixed';
+          block.style.top = 0;
+          block.style.bottom = 0;
+          block.style.left = 0;
+          block.style.right = 0;
+          block.style.zIndex = 99999;
+
+          function removeBlock() {
+            block.parentNode.removeChild(block);
+          }
+          
+          if (timeout) {
+            document.body.appendChild(block);
+            setTimeout(removeBlock, timeout);
+          }
+          
+        };
+
+        createClickBlocker(clickDelay);
+        
+
+        if (clickGateway) {
+          clickGatewayElement = document.createElement('div');
+          clickGatewayElement.innerHTML = clickGatewayHtml;
+          clickGatewayElement = clickGatewayElement.firstChild;
+          clickGatewayElement.style.display = 'none';
+          clickGatewayElement.querySelector('.click-gateway-link')
+                             .addEventListener('click', (e) => {
+                               window.parent.postMessage('closeInterstitial', '*');
+                             });
+          document.body.appendChild(clickGatewayElement);
+        }
+        
+      });
+      
+    </script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+        
+    
+              <script>
+            var oldOpen = window.open;
+      window.open = function(url) {
+        var ckphp = '//adsvids.com/ck.php?oaparams=2__bannerid={bannerid}__zoneid=1872400__OXLCA=1__cb=bc54561ad7__oadest=' + encodeURIComponent(encodeURIComponent(url));
+        window.trackingUrl = ckphp;
+      }
+
+      function waitForTrackingUrl() {
+        if (window.trackingUrl) {
+          return window.trackingUrl;
+        }
+        else {
+          setTimeout(waitForTrackingUrl, 50);
+        }
+      }
+            
+      document.body.addEventListener('click', function(e) {
+        
+        function isLink(node) {
+          if (node) {
+            if (
+              
+                            
+              node.tagName == 'A') {
+              return node;
+            }
+            else {
+              return isLink(node.parentNode);
+            }  
+          }
+          else {
+            return false;
+          }
+        }
+        var link = isLink(e.target);
+        if (link) {
+          if (clickGateway) {
+                        clickGatewayElement.querySelector('.click-gateway-link')
+                               .setAttribute('href', waitForTrackingUrl());
+                        
+            clickGatewayElement.style.display = 'flex';
+            clickGatewayElement.classList.add('click-gateway-visible');
+            clickGateway = false;
+          }
+          else {
+                        if (link.getAttribute('class') != 'click-gateway-link') {
+              oldOpen(waitForTrackingUrl());  
+            }
+                        window.parent.postMessage('closeInterstitial', '*');  
+          }
+        }
+        
+      });  
+    </script>    
+    
+    
+    
+    
+    
+        
+  
+
+
+  
+
+
+  
+
+
+  
+
+  
+      
+    		<script type="text/javascript">
+			(function(w, d){
+				var isAndroid = /android/i.test(window.navigator.userAgent);
+				var isFacebookBrowser = /FBAV\//i.test(window.navigator.userAgent);
+				var ln = d.querySelectorAll("[href='https://mobpushup.com/ck.php?zoneid=1872400&oaparams=2__bannerid=1937796__zoneid=1872400__OXLCA=1__cb=fe02f9ddde__oadest='], [data-href='https://mobpushup.com/ck.php?zoneid=1872400&oaparams=2__bannerid=1937796__zoneid=1872400__OXLCA=1__cb=fe02f9ddde__oadest=']");
+				for (i = 0; i < ln.length; ++i) {
+					if(ln[i].addEventListener) {
+						ln[i].addEventListener("click", function(e) {
+							w.parent.postMessage('closeInterstitial', '*');
+							if(isAndroid && isFacebookBrowser) {
+								trackingFB();
+							} else {
+								tracking();
+							}
+							e.preventDefault();
+						});
+					} else {
+						if(ln[i].attachEvent) {
+							ln[i].attachEvent("onclick", function(e) {
+								w.parent.postMessage('closeInterstitial', '*');
+								if(isAndroid && isFacebookBrowser) {
+									trackingFB();
+								} else {
+									tracking();
+								}
+								e.preventDefault();
+							});
+						}
+					}
+				}
+				function tracking() {
+					window.open("https://mobpushup.com/ck.php?zoneid=1872400&oaparams=2__bannerid=1937796__zoneid=1872400__OXLCA=1__cb=fe02f9ddde__oadest=");
+				}
+				function trackingFB() {
+					window.open("https://mobpushup.com/ck.php?zoneid=1872400&oaparams=2__bannerid=1937796__zoneid=1872400__OXLCA=1__cb=fe02f9ddde__oadest=", "_top", "");
+				}
+			})(window, document);
+		</script>
+      
+  
+
+ 
+
+  <div style="display:none;"><a href="//go.ad1data.com/afu.php?id=1569265&var=${SUBID}">Go to site</a></div>
+
+</body>
+</html>
